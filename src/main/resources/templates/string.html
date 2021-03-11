@@ -7,10 +7,8 @@
 <body>
 	<p>I m in templates/string</p>
 	<br/>
-	<h2 th:text="'The Words are:' + ${words} + '.'">aaaaaa</h2>
-
 	<div th:if="${words != null}">
-		<h3>Result</h3>
+		<h1>Result</h1>
 		<ul>
 			<li th:each="item : ${words}" th:text="${item}"></li>
 		</ul>
