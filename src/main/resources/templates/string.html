@@ -6,8 +6,15 @@
 </head>
 <body>
 	<p>I m in templates/string</p>
-	<p th:text="'The Words are:' + ${words} + '.'">aaaaaa</p>
+	<br/>
+	<h2 th:text="'The Words are:' + ${words} + '.'">aaaaaa</h2>
 
-
+	<div th:if="${words != null}">
+		<h3>Result</h3>
+		<ul>
+			<li th:each="item : ${words}" th:text="${item}"></li>
+		</ul>
+	</div>
+	<p>Now you can come back in <a href="http://localhost:8080/"> the previous page.</a></p>
 </body>
 </html>
