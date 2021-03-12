@@ -1,4 +1,4 @@
-package it.javaboss.webapp.config;
+package net.alepuzio.mms.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;

@@ -1,10 +1,10 @@
 
 
 
-package it.javaboss.webapp.mms;
+package net.alepuzio.mms.domain;
 
 public enum EnumImage {
-	 UNO(01,"SD","SEDIA")
+	 UNO(01,"SD","SEDIA") 
 	, DUE(02,"SN","SENO")
 	, TRE(03,"SCM","SCIMMIA")
 	, QUATTRO(04,"SR","SERA")

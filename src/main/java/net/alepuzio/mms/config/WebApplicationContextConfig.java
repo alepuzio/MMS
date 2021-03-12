@@ -1,4 +1,4 @@
-package it.javaboss.webapp.config;
+package net.alepuzio.mms.config;
 
 import org.slf4j.Logger;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
@@ -17,9 +17,8 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan({ "it.javaboss.webapp" })
-public class WebApplicationContextConfig
-		/* deprecated extends WebMvcConfigurerAdapter */ implements WebMvcConfigurer {
+@ComponentScan({ "net.alepuzio.mss" })
+public class WebApplicationContextConfig implements WebMvcConfigurer {
 
 	private Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
 

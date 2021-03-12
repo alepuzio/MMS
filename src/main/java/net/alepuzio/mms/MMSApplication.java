@@ -1,4 +1,4 @@
-package it.javaboss.webapp;
+package net.alepuzio.mms;
 
 
 import org.springframework.boot.SpringApplication;

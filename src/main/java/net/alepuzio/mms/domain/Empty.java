@@ -1,4 +1,4 @@
-package it.javaboss.webapp.mms;
+package net.alepuzio.mms.domain;
 
 import java.util.List;
 

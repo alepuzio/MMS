@@ -1,4 +1,4 @@
-package it.javaboss.webapp.controller;
+package net.alepuzio.mms.controller;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import it.javaboss.webapp.mms.NumberToDecodify;
+import net.alepuzio.mms.domain.NumberToDecodify;
 
 @Controller
 public class MMSController {

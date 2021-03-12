@@ -1,4 +1,4 @@
-package net.alepuzio.mnemonicmajorsystem;
+package net.alepuzio.mms;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,11 @@ import org.junit.Ignore;
 //import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-import it.javaboss.webapp.mms.EnumImage;
-import it.javaboss.webapp.mms.NumberToDecodify;
+import net.alepuzio.mms.domain.EnumImage;
+import net.alepuzio.mms.domain.NumberToDecodify;
+
+import static org.junit.Assert.*;
 
 public class TestNumberToDecodify {
 
