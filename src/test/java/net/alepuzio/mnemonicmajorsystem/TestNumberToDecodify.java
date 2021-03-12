@@ -137,14 +137,40 @@ public class TestNumberToDecodify {
 			assertFalse(true);
 		}
 	}
-	
+
 	@Test
-	public void testDecodifySingleUnkownNumber(){
-		String number = "98";
+	public void test12345678900087654321(){
+		String number = "12345678900987654321";
 		instance = new NumberToDecodify(number);
 		try{
 			List<String> expected = new ArrayList<>();
-			expected.add("Undefined number[98]");
+			expected.add(EnumImage.DODICI.image());
+			expected.add(EnumImage.TRENTAQUATTRO.image());
+			expected.add(EnumImage.CINQUANTASEI.image());
+			expected.add(EnumImage.SETTANTOTTO.image());
+			expected.add(EnumImage.NOVANTA.image());
+			expected.add("Undefined number[9]");
+			
+			expected.add(EnumImage.OTTANTASETTE.image());
+			expected.add(EnumImage.SESSANTACINQUE.image());
+			expected.add(EnumImage.QUARANTATRE.image());
+			expected.add(EnumImage.VENTIUNO.image());
+			
+			List<String> actual = instance.listImage();
+			assertEquals(expected, actual);;
+		} catch(Exception e) {
+			assertFalse(true);
+		}
+	}
+
+	
+	@Test
+	public void testDecodifySingleUnkownNumber(){
+		String number = "09";
+		instance = new NumberToDecodify(number);
+		try{
+			List<String> expected = new ArrayList<>();
+			expected.add("Undefined number[9]");
 			List<String> actual = instance.listImage();
 			assertEquals(expected, actual);;
 		} catch(Exception e) {
@@ -154,11 +180,11 @@ public class TestNumberToDecodify {
 
 	@Test
 	public void testDecodifyUnkownAndKnownNumbers(){
-		String number = "9888";
+		String number = "0888";
 		instance = new NumberToDecodify(number);
 		try{
 			List<String> expected = new ArrayList<>();
-			expected.add("Undefined number[98]");
+			expected.add("Undefined number[8]");
 			expected.add(EnumImage.OTTANTOTTO.image());
 			List<String> actual = instance.listImage();
 			assertEquals(expected, actual);;
