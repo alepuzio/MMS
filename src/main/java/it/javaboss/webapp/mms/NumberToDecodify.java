@@ -33,6 +33,7 @@ public class NumberToDecodify implements ToDecodify {
 	public List<String> listImage(){
 		logger.info(">listImage()");
 		List<String> result = new ArrayList<String>();
+		
 		for (int i = 0; i < number.length(); i = i+2){
 			logger.debug(String.format("coppia(%s)", number.substring(i, i+2)));
 			result.add(image(Integer.parseInt(number.substring(i, i+2))));

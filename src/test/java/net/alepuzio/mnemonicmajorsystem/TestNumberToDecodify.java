@@ -3,6 +3,8 @@ package net.alepuzio.mnemonicmajorsystem;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Ignore;
+
 //import org.junit.jupiter.api.Test;
 //import static org.junit.jupiter.api.Assertions.*;
 
@@ -51,6 +53,21 @@ public class TestNumberToDecodify {
 		assertTrue(true);
 	}
 
+	@Test
+	@Ignore //TODO find OOP solution of this case  
+	public void testOneDigit(){
+		String number = "3";
+		instance = new NumberToDecodify(number);
+		try{
+			List<String> expected = new ArrayList<>();
+			expected.add(EnumImage.CENTO.image());
+			List<String> actual = instance.listImage();
+			assertEquals(expected, actual);;
+		} catch(Exception e) {
+			assertFalse(true);
+		}
+		assertTrue(false);
+	}
 	
 	@Test
 	public void test00(){

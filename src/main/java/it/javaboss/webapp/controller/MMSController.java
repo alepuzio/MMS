@@ -27,7 +27,7 @@ public class MMSController {
 			if (number.isEmpty()) {
 				mav.addObject("errorMessage", "Empty value!");
 			} else {
-				if (1 < (number.length() % 2)) {
+				if (1 == (number.length() % 2)) {
 					number = "0" + number;
 				}
 				List<String> images = new NumberToDecodify(number).listImage();
