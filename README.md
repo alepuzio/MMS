@@ -63,7 +63,7 @@ The images are described in Italian language.
 
 * **Alessandro Puzielli** - *creator* - [Alepuzio](https://github.com/alepuzio)
 
-* See also the list of [contributors](https://github.com/alepuzio/MMS/contributors) who participated in this project.
+* See also the list of [contributors](https://github.com/alepuzio/MMS/graphs/contributor) who participated in this project.
 
 ## License
 
