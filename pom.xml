@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>net.alepuzio</groupId>
 	<artifactId>mnemonic-major-system</artifactId>
-	<version>0.1.1</version><!-- semantic versioning -->
+	<version>0.1.2</version><!-- semantic versioning -->
 	<packaging>jar</packaging>
 	<name>mnemonic-major-system</name>
 	<description>Demo project for Spring Boot</description>
