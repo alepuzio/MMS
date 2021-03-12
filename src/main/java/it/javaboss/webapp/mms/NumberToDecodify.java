@@ -15,14 +15,15 @@ public class NumberToDecodify implements ToDecodify {
 		this.number = newNumber;
 	}
 	
-	private String image(String coupleDigit) {
-		logger.debug(String.format("image(%s)", coupleDigit));
+	private String image(int coupleDigit) {
+		logger.debug(String.format("image(%d)", coupleDigit));
 		String result = null;
-		if ("00".equals(coupleDigit)) {
-			result = "sasso";
-		} else if ("24".equals(coupleDigit)) {
-			result = "Nero (Wolfe)";
-		}else {
+		for(EnumImage tmp : EnumImage.values()){
+			if (tmp.number() == coupleDigit){
+				result = tmp.image();
+			}
+		}
+		if ( null == result) {
 			result = String.format("Undefined number[%s]", coupleDigit);
 		}
 		return result;
@@ -30,12 +31,13 @@ public class NumberToDecodify implements ToDecodify {
 	
 	@Override
 	public List<String> listImage(){
-		System.out.println(String.format("images(%s)", this.number));
+		logger.info(">listImage()");
 		List<String> result = new ArrayList<String>();
 		for (int i = 0; i < number.length(); i = i+2){
 			logger.debug(String.format("coppia(%s)", number.substring(i, i+2)));
-			result.add(image(number.substring(i, i+2)));
+			result.add(image(Integer.parseInt(number.substring(i, i+2))));
 		}
+		logger.info("<listImage()");
 		return result;
 	}
 

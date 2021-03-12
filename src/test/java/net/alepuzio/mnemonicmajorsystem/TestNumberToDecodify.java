@@ -9,22 +9,21 @@ import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import it.javaboss.webapp.mms.EnumImage;
 import it.javaboss.webapp.mms.NumberToDecodify;
 
 public class TestNumberToDecodify {
 
 	private NumberToDecodify instance = null;
 	
-	/*@org.junit.jupiter.api.Test*/
 	@Test
-	public void testSubString() throws Exception {
+	public void testSubString() {
 		String number = "0123456789";
 		String actual = number.substring(0,2);
 		assertEquals("01", actual);
 		actual = number.substring(2,4);
 		assertEquals("23", actual);
 	}
-
 	
 	@Test
 	public void testNull(){
@@ -32,7 +31,7 @@ public class TestNumberToDecodify {
 		instance = new NumberToDecodify(number);
 		try{
 			instance.listImage();
-		}catch(NullPointerException e){
+		} catch(NullPointerException e) {
 			assertTrue(true);
 		}
 		//assertTrue(false); TODO rivedere
@@ -46,7 +45,7 @@ public class TestNumberToDecodify {
 		instance = new NumberToDecodify(number);
 		try{
 			instance.listImage();
-		}catch(Exception e){
+		} catch(Exception e) {
 			assertFalse(false);
 		}
 		assertTrue(true);
@@ -59,10 +58,10 @@ public class TestNumberToDecodify {
 		instance = new NumberToDecodify(number);
 		try{
 			List<String> expected = new ArrayList<>();
-			expected.add("sasso");
+			expected.add(EnumImage.CENTO.image());
 			List<String> actual = instance.listImage();
 			assertEquals(expected, actual);;
-		} catch(Exception e){
+		} catch(Exception e) {
 			assertFalse(true);
 		}
 	}
@@ -73,10 +72,11 @@ public class TestNumberToDecodify {
 		instance = new NumberToDecodify(number);
 		try{
 			List<String> expected = new ArrayList<>();
-			expected.add("sasso");
+			expected.add(EnumImage.CENTO.image());
+			expected.add(EnumImage.VENTIQUATTRO.image());
 			List<String> actual = instance.listImage();
 			assertEquals(expected, actual);;
-		}catch(Exception e){
+		} catch(Exception e) {
 			assertFalse(true);
 		}
 	}
