@@ -4,8 +4,19 @@
 package it.javaboss.webapp.mms;
 
 public enum EnumImage {
-
-	 DIECI(10,"TZ","TAZZE")
+	 UNO(01,"SD","SEDIA")
+	, DUE(02,"SN","SENO")
+	, TRE(03,"SCM","SCIMMIA")
+	, QUATTRO(04,"SR","SERA")
+	, CINQUE(05,"SL","ISOLA")
+	, SEI(06,"SG","SAGGIO")
+	, SETTE(07,"SCH","SECCHIO")
+	/*, OTTO(08,"SV","SAVOIA") 
+	 * , NOVE(09,"SP","SPI")
+	 * Error : The literal 08 of type int is out of range.
+	 * Solution in different type like String , 
+	 * read https://stackoverflow.com/questions/970039/09-is-not-recognized-where-as-9-is-recognized */	
+	, DIECI(10,"TZ","TAZZE")
 	, UNDICI(11,"DD","DADI")
 	, DODICI(12,"DN","DNA")
 	, TREDICI(13,"DM","DAMA")
@@ -91,7 +102,7 @@ public enum EnumImage {
 	,	OTTANTACINQUE (85,"FGL","FOGLIE")
 	,	OTTANTASEI (86,"FC","FACCIA")
 	,	OTTANTASETTE (87,"FCH","FUOCO")
-	,	OTTANTOTTO (88,"FV","FAVE")
+	,	OTTANTOTTO (88,"FV","FAVA")
 	,	OTTANTANOVE (89,"VP","VIP")
 	,	NOVANTA (90,"PZ","PIZZA")
 
@@ -102,11 +113,9 @@ public enum EnumImage {
 	,	NOVANTACINQUE(95,"BGL","BIGLIA")
 	,	NOVANTASEI(96,"BC","BICI ")
 	,	NOVANTASETTE(97,"PCH","PACCO")
-	//,	NOVANTOTTO(98,"PF","PUFFO") to allow the test UNKONW NUMBER
+	,	NOVANTOTTO(98,"PF","PUFFO") 
 	,	NOVANTANOVE(99,"PP","PIPPO")
 
-
-	
 	
 	, CENTO(00,"SASSO", "SASSO")
 	
