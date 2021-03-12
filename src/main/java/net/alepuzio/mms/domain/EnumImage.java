@@ -4,7 +4,8 @@
 package net.alepuzio.mms.domain;
 
 public enum EnumImage {
-	 UNO(01,"SD","SEDIA") 
+	ZERO(00,"SS","SASSO")
+	, UNO(01,"SD","SEDIA") 
 	, DUE(02,"SN","SENO")
 	, TRE(03,"SCM","SCIMMIA")
 	, QUATTRO(04,"SR","SERA")
@@ -115,10 +116,6 @@ public enum EnumImage {
 	,	NOVANTASETTE(97,"PCH","PACCO")
 	,	NOVANTOTTO(98,"PF","PUFFO") 
 	,	NOVANTANOVE(99,"PP","PIPPO")
-
-	
-	, CENTO(00,"SASSO", "SASSO")
-	
 	
 	;
 /*
