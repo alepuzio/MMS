@@ -99,10 +99,51 @@ public class TestNumberToDecodify {
 	}
 
 	@Test
-	public void testDecodifyUnkownNumber(){}
+	public void test002436(){
+		String number = "002436";
+		instance = new NumberToDecodify(number);
+		try{
+			List<String> expected = new ArrayList<>();
+			expected.add(EnumImage.CENTO.image());
+			expected.add(EnumImage.VENTIQUATTRO.image());
+			expected.add(EnumImage.TRENTASEI.image());
+			
+			List<String> actual = instance.listImage();
+			assertEquals(expected, actual);;
+		} catch(Exception e) {
+			assertFalse(true);
+		}
+	}
+
+	
+	@Test
+	public void testDecodifySingleUnkownNumber(){
+		String number = "99";
+		instance = new NumberToDecodify(number);
+		try{
+			List<String> expected = new ArrayList<>();
+			expected.add("Undefined number[99]");
+			List<String> actual = instance.listImage();
+			assertEquals(expected, actual);;
+		} catch(Exception e) {
+			assertFalse(true);
+		}
+	}
 
 	@Test
-	public void testSingleDigit(){}
+	public void testDecodifyUnkownAndKnownNumbers(){
+		String number = "9988";
+		instance = new NumberToDecodify(number);
+		try{
+			List<String> expected = new ArrayList<>();
+			expected.add("Undefined number[99]");
+			expected.add(EnumImage.OTTANTOTTO.image());
+			List<String> actual = instance.listImage();
+			assertEquals(expected, actual);;
+		} catch(Exception e) {
+			assertFalse(true);
+		}
+	}
 
 }
 
