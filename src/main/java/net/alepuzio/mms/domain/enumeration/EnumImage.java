@@ -1,0 +1,147 @@
+
+
+
+package net.alepuzio.mms.domain.enumeration;
+
+public enum EnumImage {
+	UNKOWN(EnumNumber.UNKOWN,EnumPhoneticSound.UNKOWN,EnumWord.UNKOWN)
+	,ZERO(EnumNumber.ZERO,EnumPhoneticSound.ZERO,EnumWord.ZERO)
+	, UNO(EnumNumber.UNO,EnumPhoneticSound.UNO, EnumWord.UNO)
+	, DUE(EnumNumber.DUE, EnumPhoneticSound.DUE, EnumWord.DUE)
+	, TRE(EnumNumber.TRE,EnumPhoneticSound.TRE, EnumWord.TRE)
+	, QUATTRO(EnumNumber.QUATTRO,EnumPhoneticSound.QUATTRO, EnumWord.QUATTRO)
+	, CINQUE(EnumNumber.CINQUE,EnumPhoneticSound.CINQUE,EnumWord.CINQUE)
+	, SEI(EnumNumber.SEI,EnumPhoneticSound.SEI,EnumWord.SEI)
+	, SETTE(EnumNumber.SETTE,EnumPhoneticSound.SETTE,EnumWord.SETTE)
+	, OTTO(EnumNumber.OTTO, EnumPhoneticSound.OTTO, EnumWord.OTTO) 
+	 , NOVE(EnumNumber.NOVE,EnumPhoneticSound.NOVE, EnumWord.NOVE)
+	 /* Error : The literal 08 of type int is out of range.
+	 * Solution in different type like String , 
+	 * read https://stackoverflow.com/questions/970039/09-is-not-recognized-where-as-9-is-recognized 	
+	*/, DIECI(EnumNumber.DIECI,EnumPhoneticSound.DIECI,EnumWord.DIECI)
+	, UNDICI(EnumNumber.UNDICI, EnumPhoneticSound.UNDICI, EnumWord.UNDICI)
+	, DODICI(EnumNumber.DODICI,EnumPhoneticSound.DODICI, EnumWord.DODICI)
+	, TREDICI(EnumNumber.TREDICI, EnumPhoneticSound.TREDICI, EnumWord.TREDICI)
+	, QUATTORDICI(EnumNumber.QUATTORDICI,EnumPhoneticSound.QUATTORDICI,EnumWord.QUATTORDICI)
+	, QUINDI(EnumNumber.QUINDI,EnumPhoneticSound.QUINDI,EnumWord.QUINDI)
+	, SEDICI(EnumNumber.SEDICI,EnumPhoneticSound.SEDICI,EnumWord.SEDICI)
+	, DICIASETTE(EnumNumber.DICIASETTE,EnumPhoneticSound.DICIASETTE,EnumWord.DICIASETTE)
+	, DICIOTTO(EnumNumber.DICIOTTO,EnumPhoneticSound.DICIOTTO,EnumWord.DICIOTTO)
+	, DICIANNOVE(EnumNumber.DICIANNOVE,EnumPhoneticSound.DICIANNOVE,EnumWord.DICIANNOVE)
+	, VENTI(EnumNumber.VENTI,EnumPhoneticSound.VENTI,EnumWord.VENTI)
+	
+	, VENTIUNO(EnumNumber.VENTIUNO,EnumPhoneticSound.VENTIUNO,EnumWord.VENTIUNO)
+	, VENTIDUE(EnumNumber.VENTIDUE,EnumPhoneticSound.VENTIDUE,EnumWord.VENTIDUE)
+	, VENTITRE(EnumNumber.VENTITRE,EnumPhoneticSound.VENTITRE,EnumWord.VENTITRE)
+	, VENTIQUATTRO(EnumNumber.VENTIQUATTRO,EnumPhoneticSound.VENTIQUATTRO,EnumWord.VENTIQUATTRO)
+	, VENTICINQUE(EnumNumber.VENTICINQUE,EnumPhoneticSound.VENTICINQUE,EnumWord.VENTICINQUE)
+	, VENTISEI(EnumNumber.VENTISEI,EnumPhoneticSound.VENTISEI,EnumWord.VENTISEI)
+	, VENTISETTE(EnumNumber.VENTISETTE,EnumPhoneticSound.VENTISETTE,EnumWord.VENTISETTE)
+	, VENTIOTTO(EnumNumber.VENTIOTTO,EnumPhoneticSound.VENTIOTTO,EnumWord.VENTIOTTO)
+	, VENTINOVE(EnumNumber.VENTINOVE,EnumPhoneticSound.VENTINOVE,EnumWord.VENTINOVE)
+	, TRENTA(EnumNumber.TRENTA,EnumPhoneticSound.TRENTA,EnumWord.TRENTA)
+
+	, TRENTAUNO(EnumNumber.TRENTAUNO,EnumPhoneticSound.TRENTAUNO,EnumWord.TRENTAUNO)
+	, TRENTADUE(EnumNumber.TRENTADUE,EnumPhoneticSound.TRENTADUE,EnumWord.TRENTADUE)
+	, TRENTATRE(EnumNumber.TRENTATRE,EnumPhoneticSound.TRENTATRE,EnumWord.TRENTATRE)
+	, TRENTAQUATTRO(EnumNumber.TRENTAQUATTRO,EnumPhoneticSound.TRENTAQUATTRO,EnumWord.TRENTAQUATTRO)
+	, TRENTACINQUE(EnumNumber.TRENTACINQUE,EnumPhoneticSound.TRENTACINQUE,EnumWord.TRENTACINQUE)
+	, TRENTASEI(EnumNumber.TRENTASEI,EnumPhoneticSound.TRENTASEI,EnumWord.TRENTASEI)
+	, TRENTASETTE(EnumNumber.TRENTASETTE,EnumPhoneticSound.TRENTASETTE,EnumWord.TRENTASETTE)
+	, TRENTOTTO(EnumNumber.TRENTOTTO,EnumPhoneticSound.TRENTOTTO,EnumWord.TRENTOTTO)
+	, TRENTANOVE(EnumNumber.TRENTANOVE,EnumPhoneticSound.TRENTANOVE,EnumWord.TRENTANOVE)
+	, QUARANTA(EnumNumber.QUARANTA,EnumPhoneticSound.QUARANTA,EnumWord.QUARANTA)
+
+	, QUARANTAUNO(EnumNumber.QUARANTAUNO,EnumPhoneticSound.QUARANTAUNO,EnumWord.QUARANTAUNO)
+	, QUARANTADUE(EnumNumber.QUARANTADUE,EnumPhoneticSound.QUARANTADUE,EnumWord.QUARANTADUE)
+	, QUARANTATRE(EnumNumber.QUARANTATRE,EnumPhoneticSound.QUARANTATRE,EnumWord.QUARANTATRE)
+	, QUARANTAQUATTRO(EnumNumber.QUARANTAQUATTRO,EnumPhoneticSound.QUARANTAQUATTRO,EnumWord.QUARANTAQUATTRO)
+	, QUARANTACINQUE(EnumNumber.QUARANTACINQUE,EnumPhoneticSound.QUARANTACINQUE,EnumWord.QUARANTACINQUE)
+	, QUARANTASEI(EnumNumber.QUARANTASEI,EnumPhoneticSound.QUARANTASEI,EnumWord.QUARANTASEI)
+	, QUARANTASETTE(EnumNumber.QUARANTASETTE,EnumPhoneticSound.QUARANTASETTE,EnumWord.QUARANTASETTE)
+	, QUARANTOTTO(EnumNumber.QUARANTOTTO,EnumPhoneticSound.QUARANTOTTO,EnumWord.QUARANTOTTO)
+	, QUARANTANOVA(EnumNumber.QUARANTANOVA,EnumPhoneticSound.QUARANTANOVA,EnumWord.QUARANTANOVA)
+	, CINQUANTA(EnumNumber.CINQUANTA,EnumPhoneticSound.CINQUANTA,EnumWord.CINQUANTA)
+
+	, CINQUANTUNO(EnumNumber.CINQUANTUNO,EnumPhoneticSound.CINQUANTUNO,EnumWord.CINQUANTUNO)
+	, CINQUANTADUE(EnumNumber.CINQUANTADUE,EnumPhoneticSound.CINQUANTADUE,EnumWord.CINQUANTADUE)
+	, CINQUANTATRE(EnumNumber.CINQUANTATRE,EnumPhoneticSound.CINQUANTATRE,EnumWord.CINQUANTATRE)
+	, CINQUANTAQUATTRO(EnumNumber.CINQUANTAQUATTRO,EnumPhoneticSound.CINQUANTAQUATTRO,EnumWord.CINQUANTAQUATTRO)
+	, CINQUANTACINQUE(EnumNumber.CINQUANTACINQUE,EnumPhoneticSound.CINQUANTACINQUE,EnumWord.CINQUANTACINQUE)
+	, CINQUANTASEI(EnumNumber.CINQUANTASEI,EnumPhoneticSound.CINQUANTASEI,EnumWord.CINQUANTASEI)
+	, CINQUANTASETTE(EnumNumber.CINQUANTASETTE,EnumPhoneticSound.CINQUANTASETTE,EnumWord.CINQUANTASETTE)
+	, CINQUANTAOTTO(EnumNumber.CINQUANTAOTTO,EnumPhoneticSound.CINQUANTAOTTO,EnumWord.CINQUANTAOTTO)
+	, CINQUANTANOVA(EnumNumber.CINQUANTANOVA,EnumPhoneticSound.CINQUANTANOVA,EnumWord.CINQUANTANOVA)
+	, SESSANTA(EnumNumber.SESSANTA,EnumPhoneticSound.SESSANTA,EnumWord.SESSANTA)
+
+
+
+	,	SESSANTUNO (EnumNumber.SESSANTUNO,EnumPhoneticSound.SESSANTUNO,EnumWord.SESSANTUNO)
+	,	SESSANTADUE (EnumNumber.SESSANTADUE,EnumPhoneticSound.SESSANTADUE,EnumWord.SESSANTADUE)
+	,	SESSANTATRE (EnumNumber.SESSANTATRE,EnumPhoneticSound.SESSANTATRE,EnumWord.SESSANTATRE)
+	,	SESSANTAQUATTRO (EnumNumber.SESSANTAQUATTRO,EnumPhoneticSound.SESSANTAQUATTRO,EnumWord.SESSANTAQUATTRO)
+	,	SESSANTACINQUE (EnumNumber.SESSANTACINQUE,EnumPhoneticSound.SESSANTACINQUE,EnumWord.SESSANTACINQUE)
+	,	SESSANTASEI (EnumNumber.SESSANTASEI,EnumPhoneticSound.SESSANTASEI,EnumWord.SESSANTASEI)
+	,	SESSANTASETTE (EnumNumber.SESSANTASETTE,EnumPhoneticSound.SESSANTASETTE,EnumWord.SESSANTASETTE)
+	,	SESSANTOTTO (EnumNumber.SESSANTOTTO,EnumPhoneticSound.SESSANTOTTO,EnumWord.SESSANTOTTO)
+	,	SESSANTANOVA (EnumNumber.SESSANTANOVA,EnumPhoneticSound.SESSANTANOVA,EnumWord.SESSANTANOVA)
+	,	SETTANTA (EnumNumber.SETTANTA,EnumPhoneticSound.SETTANTA,EnumWord.SETTANTA)
+	
+	,	SETTANTUNO  (EnumNumber.SETTANTUNO,EnumPhoneticSound.SETTANTUNO,EnumWord.SETTANTUNO)
+	,	SETTANTADUE  (EnumNumber.SETTANTADUE,EnumPhoneticSound.SETTANTADUE,EnumWord.SETTANTADUE)
+	,	SETTANTATRE  (EnumNumber.SETTANTATRE,EnumPhoneticSound.SETTANTATRE,EnumWord.SETTANTATRE)
+	,	SETTANTAQUATTRO  (EnumNumber.SETTANTAQUATTRO,EnumPhoneticSound.SETTANTAQUATTRO,EnumWord.SETTANTAQUATTRO)
+	,	SETTANTACINQUE  (EnumNumber.SETTANTACINQUE,EnumPhoneticSound.SETTANTACINQUE,EnumWord.SETTANTACINQUE)
+	,	SETTANTASEI  (EnumNumber.SETTANTASEI,EnumPhoneticSound.SETTANTASEI,EnumWord.SETTANTASEI)
+	,	SETTANTASETTE  (EnumNumber.SETTANTASETTE,EnumPhoneticSound.SETTANTASETTE,EnumWord.SETTANTASETTE)
+	,	SETTANTOTTO  (EnumNumber.SETTANTOTTO,EnumPhoneticSound.SETTANTOTTO,EnumWord.SETTANTOTTO)
+	,	SETTANTANOVE  (EnumNumber.SETTANTANOVE,EnumPhoneticSound.SETTANTANOVE,EnumWord.SETTANTANOVE) 
+	,	OTTANTA (EnumNumber.OTTANTA,EnumPhoneticSound.OTTANTA,EnumWord.OTTANTA)
+	,	OTTANTUNO (EnumNumber.OTTANTUNO,EnumPhoneticSound.OTTANTUNO,EnumWord.OTTANTUNO)
+	,	OTTANTADUE (EnumNumber.OTTANTADUE,EnumPhoneticSound.OTTANTADUE,EnumWord.OTTANTADUE)
+	,	OTTANTATRE (EnumNumber.OTTANTATRE,EnumPhoneticSound.OTTANTATRE,EnumWord.OTTANTATRE)
+	,	OTTANTAQUATTRO (EnumNumber.OTTANTAQUATTRO,EnumPhoneticSound.OTTANTAQUATTRO,EnumWord.OTTANTAQUATTRO)
+	,	OTTANTACINQUE (EnumNumber.OTTANTACINQUE,EnumPhoneticSound.OTTANTACINQUE,EnumWord.OTTANTACINQUE)
+	,	OTTANTASEI (EnumNumber.OTTANTASEI,EnumPhoneticSound.OTTANTASEI,EnumWord.OTTANTASEI)
+	,	OTTANTASETTE (EnumNumber.OTTANTASETTE,EnumPhoneticSound.OTTANTASETTE,EnumWord.OTTANTASETTE)
+	,	OTTANTOTTO (EnumNumber.OTTANTOTTO,EnumPhoneticSound.OTTANTOTTO,EnumWord.OTTANTOTTO)
+	,	OTTANTANOVE (EnumNumber.OTTANTANOVE,EnumPhoneticSound.OTTANTANOVE,EnumWord.OTTANTANOVE)
+	,	NOVANTA (EnumNumber.NOVANTA,EnumPhoneticSound.NOVANTA,EnumWord.NOVANTA)
+	
+	,	NOVANTUNO(EnumNumber.NOVANTUNO,EnumPhoneticSound.NOVANTUNO,EnumWord.NOVANTUNO)   
+	,	NOVANTADUE(EnumNumber.NOVANTADUE,EnumPhoneticSound.NOVANTADUE,EnumWord.NOVANTADUE)
+	,	NOVANTATRE(EnumNumber.NOVANTATRE,EnumPhoneticSound.NOVANTATRE,EnumWord.NOVANTATRE)   
+	,	NOVANTAQUATTRO(EnumNumber.NOVANTAQUATTRO,EnumPhoneticSound.NOVANTAQUATTRO,EnumWord.NOVANTAQUATTRO)
+	,	NOVANTACINQUE(EnumNumber.NOVANTACINQUE,EnumPhoneticSound.NOVANTACINQUE,EnumWord.NOVANTACINQUE)
+	,	NOVANTASEI(EnumNumber.NOVANTASEI,EnumPhoneticSound.NOVANTASEI,EnumWord.NOVANTASEI)
+	,	NOVANTASETTE(EnumNumber.NOVANTASETTE,EnumPhoneticSound.NOVANTASETTE,EnumWord.NOVANTASETTE)
+	,	NOVANTOTTO(EnumNumber.NOVANTOTTO,EnumPhoneticSound.NOVANTOTTO,EnumWord.NOVANTOTTO) 
+	,	NOVANTANOVE(EnumNumber.NOVANTANOVE,EnumPhoneticSound.NOVANTANOVE,EnumWord.NOVANTANOVE)
+	/**/
+	
+	;
+/*
+	*/
+	private EnumNumber number;
+	private EnumPhoneticSound phonetic;//TODO print the associated sound
+	private EnumWord image;
+	
+	private EnumImage(EnumNumber newNumber, EnumPhoneticSound newPhonetic, EnumWord newImage  ){
+		this.number = newNumber;
+		this.phonetic = newPhonetic;
+		this.image = newImage;
+	}
+
+	public EnumNumber number() {
+		return number;
+	}
+
+	public EnumWord image() {
+		return image;
+	}
+	
+	
+	
+	
+}
+

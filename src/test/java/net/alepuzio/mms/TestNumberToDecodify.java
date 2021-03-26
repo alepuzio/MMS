@@ -10,8 +10,8 @@ import org.junit.Ignore;
 
 import org.junit.Test;
 
-import net.alepuzio.mms.domain.EnumImage;
 import net.alepuzio.mms.domain.NumberToDecodify;
+import net.alepuzio.mms.domain.enumeration.EnumImage;
 
 import static org.junit.Assert.*;
 
@@ -45,8 +45,8 @@ public class TestNumberToDecodify {
 	public void testEmpty() {
 		String number = "";
 		instance = new NumberToDecodify(number);
-		List<String> actual = instance.listImage();
-		List<String> expected = new ArrayList<String>();
+		List<EnumImage> actual = instance.listImage();
+		List<EnumImage> expected = new ArrayList<EnumImage>();
 		assertEquals(expected, actual);
 	}
 
@@ -56,9 +56,9 @@ public class TestNumberToDecodify {
 		String number = "3";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> actual = instance.listImage();
-			List<String> expected = new ArrayList<>();
-			expected.add(EnumImage.TRE.image());
+			List<EnumImage> actual = instance.listImage();
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.TRE);
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			assertFalse(true);
@@ -71,9 +71,9 @@ public class TestNumberToDecodify {
 		String number = "00";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> expected = new ArrayList<>();
-			expected.add(EnumImage.ZERO.image());
-			List<String> actual = instance.listImage();
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.ZERO);
+			List<EnumImage> actual = instance.listImage();
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			assertFalse(true);
@@ -85,10 +85,10 @@ public class TestNumberToDecodify {
 		String number = "0024";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> expected = new ArrayList<>();
-			expected.add(EnumImage.ZERO.image());
-			expected.add(EnumImage.VENTIQUATTRO.image());
-			List<String> actual = instance.listImage();
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.ZERO);
+			expected.add(EnumImage.VENTIQUATTRO);
+			List<EnumImage> actual = instance.listImage();
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			assertFalse(true);
@@ -100,12 +100,12 @@ public class TestNumberToDecodify {
 		String number = "002436";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> expected = new ArrayList<>();
-			expected.add(EnumImage.ZERO.image());
-			expected.add(EnumImage.VENTIQUATTRO.image());
-			expected.add(EnumImage.TRENTASEI.image());
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.ZERO);
+			expected.add(EnumImage.VENTIQUATTRO);
+			expected.add(EnumImage.TRENTASEI);
 
-			List<String> actual = instance.listImage();
+			List<EnumImage> actual = instance.listImage();
 			assertEquals(expected, actual);
 			;
 		} catch (Exception e) {
@@ -118,18 +118,18 @@ public class TestNumberToDecodify {
 		String number = "00132436455861748795";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> expected = new ArrayList<>();
-			expected.add(EnumImage.ZERO.image());
-			expected.add(EnumImage.TREDICI.image());
-			expected.add(EnumImage.VENTIQUATTRO.image());
-			expected.add(EnumImage.TRENTASEI.image());
-			expected.add(EnumImage.QUARANTACINQUE.image());
-			expected.add(EnumImage.CINQUANTAOTTO.image());
-			expected.add(EnumImage.SESSANTUNO.image());
-			expected.add(EnumImage.SETTANTAQUATTRO.image());
-			expected.add(EnumImage.OTTANTASETTE.image());
-			expected.add(EnumImage.NOVANTACINQUE.image());
-			List<String> actual = instance.listImage();
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.ZERO);
+			expected.add(EnumImage.TREDICI);
+			expected.add(EnumImage.VENTIQUATTRO);
+			expected.add(EnumImage.TRENTASEI);
+			expected.add(EnumImage.QUARANTACINQUE);
+			expected.add(EnumImage.CINQUANTAOTTO);
+			expected.add(EnumImage.SESSANTUNO);
+			expected.add(EnumImage.SETTANTAQUATTRO);
+			expected.add(EnumImage.OTTANTASETTE);
+			expected.add(EnumImage.NOVANTACINQUE);
+			List<EnumImage> actual = instance.listImage();
 			assertEquals(expected, actual);
 			;
 		} catch (Exception e) {
@@ -142,20 +142,20 @@ public class TestNumberToDecodify {
 		String number = "12345678900987654321";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> expected = new ArrayList<>();
-			expected.add(EnumImage.DODICI.image());
-			expected.add(EnumImage.TRENTAQUATTRO.image());
-			expected.add(EnumImage.CINQUANTASEI.image());
-			expected.add(EnumImage.SETTANTOTTO.image());
-			expected.add(EnumImage.NOVANTA.image());
-			expected.add("Undefined number[9]");
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.DODICI);
+			expected.add(EnumImage.TRENTAQUATTRO);
+			expected.add(EnumImage.CINQUANTASEI);
+			expected.add(EnumImage.SETTANTOTTO);
+			expected.add(EnumImage.NOVANTA);
+			expected.add(EnumImage.UNKOWN);
 
-			expected.add(EnumImage.OTTANTASETTE.image());
-			expected.add(EnumImage.SESSANTACINQUE.image());
-			expected.add(EnumImage.QUARANTATRE.image());
-			expected.add(EnumImage.VENTIUNO.image());
+			expected.add(EnumImage.OTTANTASETTE);
+			expected.add(EnumImage.SESSANTACINQUE);
+			expected.add(EnumImage.QUARANTATRE);
+			expected.add(EnumImage.VENTIUNO);
 
-			List<String> actual = instance.listImage();
+			List<EnumImage> actual = instance.listImage();
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			assertFalse(true);
@@ -167,9 +167,9 @@ public class TestNumberToDecodify {
 		String number = "09";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> expected = new ArrayList<>();
-			expected.add("Undefined number[9]");
-			List<String> actual = instance.listImage();
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.UNKOWN);
+			List<EnumImage> actual = instance.listImage();
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			assertFalse(true);
@@ -181,10 +181,10 @@ public class TestNumberToDecodify {
 		String number = "0888";
 		instance = new NumberToDecodify(number);
 		try {
-			List<String> expected = new ArrayList<>();
-			expected.add("Undefined number[8]");
-			expected.add(EnumImage.OTTANTOTTO.image());
-			List<String> actual = instance.listImage();
+			List<EnumImage> expected = new ArrayList<>();
+			expected.add(EnumImage.OTTO);
+			expected.add(EnumImage.OTTANTOTTO);
+			List<EnumImage> actual = instance.listImage();
 			assertEquals(expected, actual);
 		} catch (Exception e) {
 			assertFalse(true);

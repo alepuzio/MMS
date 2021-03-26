@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import net.alepuzio.mms.domain.NumberToDecodify;
+import net.alepuzio.mms.domain.enumeration.EnumImage;
 
 @Controller
 public class MMSController {
@@ -30,8 +31,8 @@ public class MMSController {
 				if (1 == (number.length() % 2)) {
 					number = "0" + number;
 				}
-				List<String> images = new NumberToDecodify(number).listImage();
-				logger.info(String.format("<decodifica(%s):%s",number, images));
+				List<EnumImage> images = new NumberToDecodify(number).listImage();
+				logger.info(String.format("<decodifica(%s):%s", number, images));
 				mav.addObject("words", images);
 			}
 		}
