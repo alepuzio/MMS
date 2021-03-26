@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import net.alepuzio.mms.domain.enumeration.EnumImage;
+
 public class NumberToDecodify implements ToDecodify {
 		
 	private String number;
@@ -15,34 +17,42 @@ public class NumberToDecodify implements ToDecodify {
 		this.number = newNumber;
 	}
 	
-	private String image(int coupleDigit) {
-		logger.debug(String.format("image(%d)", coupleDigit));
-		String result = null;
+	private EnumImage image(String coupleDigit) {
+		logger.debug(String.format("image(%s)", coupleDigit));
+		EnumImage result = null;//TODO using lambda expression
 		for(EnumImage tmp : EnumImage.values()){
-			if (tmp.number() == coupleDigit){
-				result = tmp.image();
+			if (tmp.number().number().equals (coupleDigit)){
+				result = tmp;
 			}
 		}
-		if ( null == result) {
-			result = String.format("Undefined number[%s]", coupleDigit);
+		if ( null == result) {//TODO using decorator
+			result = EnumImage.UNKOWN;
 		}
 		return result;
 	}
 	
 	@Override
-	public List<String> listImage(){
+	public List<EnumImage> listImage(){
 		logger.info(">listImage()");
-		List<String> result = new ArrayList<String>();
-		
+		List<EnumImage> result = new ArrayList<EnumImage>();
 		for (int i = 0; i < number.length(); i = i+2){
 			logger.debug(String.format("coppia(%s)", number.substring(i, i+2)));
-			result.add(image(Integer.parseInt(number.substring(i, i+2))));
+			result.add(image(number.substring(i, i+2)));
 		}
 		logger.info("<listImage()");
 		return result;
 	}
 
 	
+	public String pad(){
+		String res = null;
+		if (1 == this.number.length() %2  ){
+			res = String.format("0%s", this.number);
+		} else {
+			res = this.number;
+		}
+		return res;
+	}
 	@Override
 	public String value() {
 		return this.number;

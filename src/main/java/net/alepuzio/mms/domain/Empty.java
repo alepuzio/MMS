@@ -2,6 +2,8 @@ package net.alepuzio.mms.domain;
 
 import java.util.List;
 
+import net.alepuzio.mms.domain.enumeration.EnumImage;
+
 public class Empty implements ToDecodify {
 
 	private ToDecodify origin;
@@ -11,7 +13,7 @@ public class Empty implements ToDecodify {
 	}
 	
 	@Override
-	public List<String> listImage() {
+	public List<EnumImage> listImage() {
 		if ( !valid()){
 			throw new RuntimeException("Empty number");
 		}
