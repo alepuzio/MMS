@@ -139,6 +139,12 @@ public enum EnumImage {
 	public EnumWord image() {
 		return image;
 	}
+
+
+	public EnumPhoneticSound phonetic() {
+		return phonetic;
+	}
+
 	
 	
 	
