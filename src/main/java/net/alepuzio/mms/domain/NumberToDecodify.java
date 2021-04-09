@@ -16,6 +16,33 @@ public class NumberToDecodify implements ToDecodify {
 	public NumberToDecodify(String newNumber){
 		this.number = newNumber;
 	}
+		
+	@Override
+	public List<EnumImage> listImage(){
+		logger.info(">listImage()");
+		List<EnumImage> result = new ArrayList<EnumImage>();
+		for (int i = 0; i < number.length(); i = i+2){
+			logger.debug(String.format("coppia(%s)", number.substring(i, i+2)));
+			result.add(image(number.substring(i, i+2)));
+		}
+		logger.info("<listImage()");
+		return result;
+	}
+
+	public String pad(){
+		String res = null;
+		if (1 == this.number.length() %2  ){
+			res = String.format("0%s", this.number);
+		} else {
+			res = this.number;
+		}
+		return res;
+	}
+
+	@Override
+	public String value() {
+		return this.number;
+	}
 	
 	private EnumImage image(String coupleDigit) {
 		logger.debug(String.format("image(%s)", coupleDigit));
@@ -29,32 +56,5 @@ public class NumberToDecodify implements ToDecodify {
 			result = EnumImage.UNKOWN;
 		}
 		return result;
-	}
-	
-	@Override
-	public List<EnumImage> listImage(){
-		logger.info(">listImage()");
-		List<EnumImage> result = new ArrayList<EnumImage>();
-		for (int i = 0; i < number.length(); i = i+2){
-			logger.debug(String.format("coppia(%s)", number.substring(i, i+2)));
-			result.add(image(number.substring(i, i+2)));
-		}
-		logger.info("<listImage()");
-		return result;
-	}
-
-	
-	public String pad(){
-		String res = null;
-		if (1 == this.number.length() %2  ){
-			res = String.format("0%s", this.number);
-		} else {
-			res = this.number;
-		}
-		return res;
-	}
-	@Override
-	public String value() {
-		return this.number;
 	}
 }
